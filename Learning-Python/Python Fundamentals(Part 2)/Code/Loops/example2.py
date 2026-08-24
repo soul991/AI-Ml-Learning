@@ -1,8 +1,8 @@
 #Print "Hello World!"x5
 
-count = 0 #iterator
+count = 1 #iterator
 
-while (count<=5):
-    print("Hello World", count)
+while (count<=6):
+    print(f"Hello World{count}")
     count+=1
 print("After loop, count=",count)
