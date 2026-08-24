@@ -1,0 +1,5 @@
+There are two types of fucntions in python.
+1) built-in fucntions:- print(), range(){like for range fucntion
+start, stop and step- are three parametres; where start and step are 
+by default 0 and 1}, input()
+2)user-defines:- where user creates fucntion to use them continuously like sum(), cal_avg()
