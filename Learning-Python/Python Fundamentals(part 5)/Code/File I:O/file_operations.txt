@@ -1,0 +1,101 @@
+Python's open() function opens a file for reading, writing, or both. The mode
+argument determines how the file is accessed.
+
+Syntax:
+    open("filename", "mode")
+
+
+1. READ MODE ("r")
+------------------
+Opens an existing file for reading. The file must exist; otherwise, Python
+raises FileNotFoundError. This is the default mode.
+
+Example:
+    with open("file.txt", "r") as f:
+        data = f.read()
+        print(data)
+
+
+2. WRITE MODE ("w")
+-------------------
+Opens a file for writing. If the file already exists, its contents are erased
+(truncated) as soon as it is opened. If it does not exist, Python creates it.
+
+Example:
+    with open("file.txt", "w") as f:
+        f.write("New content")
+
+
+3. EXCLUSIVE CREATION MODE ("x")
+--------------------------------
+Creates a new file and opens it for writing. If a file with the same name
+already exists, Python raises FileExistsError. This mode prevents accidental
+overwriting of an existing file.
+
+Example:
+    with open("new_file.txt", "x") as f:
+        f.write("Created for the first time")
+
+
+4. APPEND MODE ("a")
+--------------------
+Opens a file for writing at the end. Existing content is preserved, and new
+content is added after it. If the file does not exist, Python creates it.
+
+Example:
+    with open("file.txt", "a") as f:
+        f.write("\nAdditional content")
+
+
+5. BINARY MODE ("b")
+--------------------
+Opens a file in binary mode, so data is read or written as bytes rather than
+text. It is commonly used for images, PDFs, audio, and other binary files.
+Binary mode is combined with another mode.
+
+Examples:
+    open("image.png", "rb")  # Read binary data
+    open("image.png", "wb")  # Write binary data
+
+
+6. TEXT MODE ("t")
+------------------
+Opens a file in text mode, so data is handled as strings. Text mode is the
+default, so "r" is equivalent to "rt" for reading a text file.
+
+Example:
+    with open("file.txt", "rt") as f:
+        print(f.read())
+
+
+7. UPDATE MODE ("+")
+--------------------
+The plus sign enables both reading and writing. Its behavior depends on the
+base mode:
+
+    "r+"  Read and write; the file must exist, and it is not initially erased.
+    "w+"  Read and write; existing content is erased, or a new file is created.
+    "a+"  Read and append; writes go to the end, and a missing file is created.
+
+Example:
+    with open("file.txt", "r+") as f:
+        content = f.read()
+        f.write("\nAdded text")
+
+
+COMMON MODE COMBINATIONS
+------------------------
+"rb"  Read in binary mode.
+"wb"  Write in binary mode, erasing existing content first.
+"ab"  Append in binary mode.
+"r+"  Read and write without initially erasing the file.
+"w+"  Read and write after erasing existing content.
+"a+"  Read and append, with writes going to the end.
+
+KEY POINTS
+----------
+- "r" is the default file access mode.
+- "t" is the default data mode.
+- "w" overwrites; "a" appends; "x" creates a file only if it does not exist.
+- Use "b" for binary data and text mode for ordinary text files.
+- Use "with open(...) as f:" to ensure the file is closed automatically.

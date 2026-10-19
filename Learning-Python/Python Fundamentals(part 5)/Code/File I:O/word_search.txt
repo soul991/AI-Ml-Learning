@@ -1,0 +1,5 @@
+This is a Pytyhon file.
+This text file is being written to be tested
+for the word_search.py file.
+This is not a Java file.
+Thank You.

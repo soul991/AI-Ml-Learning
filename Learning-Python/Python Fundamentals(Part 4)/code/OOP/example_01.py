@@ -1,4 +1,4 @@
-class student:
+class student: 
     subject = "Python"
     year = "4th year"
     college = "abc"
