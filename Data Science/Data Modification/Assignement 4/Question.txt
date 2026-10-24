@@ -1,0 +1,26 @@
+FITNESS APP USERS
+==================================================================
+ 
+[
+  {"user": "Tara",  "steps": "8,200", "weight": "62"},
+  {"user": "Neel",  "steps": "5k",    "weight": "80"},
+  {"user": "Isha",  "steps": "11000"},
+  {"user": "Neel ", "steps": "5000",  "weight": "81"},
+  {"user": "Omar",  "steps": "3,500", "weight": "70"}
+]
+ 
+1. CLEAN
+   - Convert steps to an integer. Values include commas ("8,200") and
+     a "k" suffix ("5k").
+   - "Neel " has a trailing space: strip names BEFORE the duplicate
+     check. Keep the first record.
+   - For a missing weight, FILL it with the average of the weights
+     that are present (do not use None).
+ 
+2. INSIGHTS
+   - Print the average steps.
+   - Print the percentage of users under 5000 steps.
+ 
+3. RECOMMENDATION
+   - Return a list of {"user", "plan"} dicts.
+   - "Run 10K" if steps >= 8000, otherwise "Daily Walk".

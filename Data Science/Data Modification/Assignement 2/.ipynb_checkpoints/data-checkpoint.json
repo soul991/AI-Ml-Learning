@@ -1,0 +1,7 @@
+[
+  {"customer": "Meera",  "stars": "four", "delivery_time": "30 mins", "city": "Kolkata"},
+  {"customer": "Karan",  "stars": "2 ",   "delivery_time": "55 mins"},
+  {"customer": "Zoya",   "stars": "FIVE", "delivery_time": "25 mins", "city": "Delhi"},
+  {"customer": "Karan",  "stars": "three","delivery_time": "40 mins", "city": "Pune"},
+  {"customer": "Ishaan", "stars": "4.5",  "delivery_time": "35 mins", "city": "Kolkata"}
+]

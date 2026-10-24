@@ -1,0 +1,24 @@
+Q2. FOOD DELIVERY FEEDBACK
+==================================================================
+ 
+[
+  {"customer": "Meera",  "stars": "four",  "delivery_time": "30 mins", "city": "Kolkata"},
+  {"customer": "Karan",  "stars": "2 ",    "delivery_time": "55 mins"},
+  {"customer": "Zoya",   "stars": "FIVE",  "delivery_time": "25 mins", "city": "Delhi"},
+  {"customer": "Karan",  "stars": "three", "delivery_time": "40 mins", "city": "Pune"},
+  {"customer": "Ishaan", "stars": "4.5",   "delivery_time": "35 mins", "city": "Kolkata"}
+]
+ 
+1. CLEAN
+   - Convert stars to numbers.
+   - Turn delivery_time into an integer number of minutes.
+   - A missing city becomes "Unknown".
+   - Deduplicate by customer, keeping the LAST record (not the first).
+ 
+2. INSIGHTS
+   - Print the average delivery time.
+   - Print the count of customers with stars >= 4.
+ 
+3. RECOMMENDATION
+   - Return a list of {"customer", "plan"} dicts.
+   - "Premium" if stars >= 4, otherwise "Standard".

@@ -1,0 +1,24 @@
+STUDENT MARKS
+==================================================================
+ 
+[
+  {"roll": 101, "name": "Riya",  "marks": "85 ",     "attendance": "90"},
+  {"roll": 102, "name": "Arjun", "marks": "seventy", "attendance": "75"},
+  {"roll": 103, "name": "Sana",  "marks": "92.5"},
+  {"roll": 104, "name": "Dev",   "attendance": "60", "marks": "thirty"},
+  {"roll": 101, "name": "Riya",  "marks": "88",      "attendance": "92"}
+]
+ 
+1. CLEAN
+   - Convert marks to numbers. The words are "thirty" and "seventy",
+     so extend your mapping dict.
+   - If attendance is missing, set it to None.
+   - Deduplicate by roll, keeping the FIRST record.
+ 
+2. INSIGHTS
+   - Print the average marks.
+   - Print the percentage of students with marks below 40.
+ 
+3. RECOMMENDATION
+   - Return a list of {"name", "track"} dicts.
+   - "Advanced" if marks >= 75, otherwise "Foundation".
